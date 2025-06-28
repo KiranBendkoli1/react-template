@@ -1,5 +1,6 @@
 import axios from "axios";
 import { LOCALSTORAGE } from "../constants/LOCALSTORAGE";
+import { toast } from "react-toastify";
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_ENDPOINT,
@@ -29,15 +30,15 @@ api.interceptors.response.use(
   },
   (error) => {
     if (error.response) {
-      console.error("Response Error:", error.response);
+      toast.error("Response Error:", error.response);
 
       if (error.response.status === 401) {
-        console.error("Unauthorized: Redirecting to login...");
+        toast.error("Unauthorized: Redirecting to login...");
       }
     } else if (error.request) {
-      console.error("No Response:", error.request);
+      toast.error("No Response:", error.request);
     } else {
-      console.error("Axios Error:", error.message);
+      toast.error("Axios Error:", error.message);
     }
 
     return Promise.reject(error);
