@@ -1,5 +1,5 @@
+import AppRouter from "@routes/AppRouter";
 import { Bounce, ToastContainer } from "react-toastify";
-import AppRouter from "./routes";
 
 function App() {
   return (
