@@ -1,0 +1,21 @@
+. "$(dirname "$0")/_/husky.sh"
+
+current_branch=$(git symbolic-ref --short HEAD)
+
+if [ "$current_branch" = "main" ]; then
+  echo "On 'main' branch — skipping update check."
+  exit 0
+fi
+
+# Fetch latest main
+git fetch origin main
+
+# Check if current branch contains all commits from origin/main
+if git merge-base --is-ancestor origin/main HEAD; then
+  echo "Branch is up-to-date with main — pushing allowed."
+  exit 0
+else
+  echo "❌ Your branch is not up to date with main."
+  echo "➡️  Please merge or rebase origin/main before pushing."
+  exit 1
+fi
