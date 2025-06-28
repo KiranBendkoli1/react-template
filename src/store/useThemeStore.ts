@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 const themes = [
   "theme-white",
@@ -15,8 +16,15 @@ type ThemeState = {
   setTheme: (theme: string) => void;
 };
 
-export const useThemeStore = create<ThemeState>((set) => ({
-  theme: themes[0],
-  themes,
-  setTheme: (theme) => set({ theme }),
-}));
+export const useThemeStore = create<ThemeState>()(
+  persist(
+    (set) => ({
+      theme: themes[0],
+      themes,
+      setTheme: (theme) => set({ theme }),
+    }),
+    {
+      name: "theme-storage", // key in localStorage
+    }
+  )
+);
