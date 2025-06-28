@@ -28,3 +28,6 @@ dist-ssr
 .env.development
 .env.staging
 .env.production
+
+
+src/styles/tailwind.css
