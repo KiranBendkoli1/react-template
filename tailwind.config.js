@@ -6,12 +6,15 @@ export default {
     "./public/**/*.html", // Include all HTML files in the public folder
   ],
   theme: {
-    colors: {
-      primary: "#FF5733",
-      white: "#FFFFFF",
-      black: "#000000",
+   
+    extend: {
+      colors:{
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        bgPrimary:"var(--color-bg-primary)",
+        tBase:"var(--color-text-base)"
+      }
     },
-    extend: {},
     screens: {
       sm: "640px",
       md: "768px",
