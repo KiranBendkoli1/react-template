@@ -1,11 +1,12 @@
 import { create } from "zustand";
 
 const themes = [
+  "theme-white",
   "theme-black",
-  "theme-orange",
-  "theme-purple",
-  "theme-green",
-  "theme-blue",
+  // "theme-orange",
+  // "theme-purple",
+  // "theme-green",
+  // "theme-blue",
 ];
 
 type ThemeState = {

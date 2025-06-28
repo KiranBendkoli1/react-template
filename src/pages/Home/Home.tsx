@@ -1,18 +1,6 @@
-import React, { useState } from "react";
-import { twMerge } from "tailwind-merge";
-
-const themes = [
-  "theme-black",
-  "theme-orange",
-  "theme-purple",
-  "theme-green",
-  "theme-blue",
-];
 const Home = () => {
-  const [theme, setTheme] = useState(themes[1]);
-
   return (
-    <div className={twMerge("flex justify-center my-4", theme)}>
+    <div className={"flex justify-center py-4 bg-bgPrimary"}>
       <div className="flex flex-col w-[600px] bg-bgPrimary p-6 rounded-lg shadow-md">
         <h1 className="mb-2 text-4xl font-bold text-primary">
           Discover the Power of Clean UI

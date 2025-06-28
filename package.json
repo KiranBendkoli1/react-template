@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently  \"npm run css:build\" \"npm run dev\" ",
-    "dev": "vite",
+    "start": "concurrently  \"npm run css:build\" \"vite\" ",
     "build": "tsc -b && vite build",
     "css:build": "npx tailwindcss -i ./src/index.css -o ./src/styles/tailwind.css --watch",
     "commit": "cz",

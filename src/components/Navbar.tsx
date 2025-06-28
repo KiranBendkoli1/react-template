@@ -1,5 +1,4 @@
 import { useThemeStore } from "@store/useThemeStore";
-import React from "react";
 
 const Navbar = () => {
   const { theme, themes, setTheme } = useThemeStore();
@@ -14,7 +13,7 @@ const Navbar = () => {
         className="px-3 py-1 border rounded bg-primary text-tBase border-primary hover:bg-secondary"
       >
         {themes.map((t) => (
-          <option key={t} value={t}>
+          <option className="shadow-none" key={t} value={t}>
             {t.replace("theme-", "").toUpperCase()}
           </option>
         ))}

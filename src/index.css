@@ -5,16 +5,24 @@
 
 @layer base {
   :root {
-    --color-primary: hsl(0, 0%, 0%);
-    --color-secondary: hsl(0, 0%, 50%);
-    --color-text-base: hsl(0, 0%, 100%);
-    --color-bg-primary: hsl(0, 0, 0%, 100%);
+    --color-primary: #f97316; /* orange-500 */
+    --color-secondary: #fb923c; /* orange-400 */
+    --color-bg-primary: #ffffff;
+    --color-text-base: #1f2937; /* gray-800 */
   }
 }
 
-.theme-blak {
-  --color-primary: hsl(0, 0%, 0%);
-  --color-secondary: hsl(0, 0%, 50%);
+.theme-white {
+  --color-primary: #f97316; /* orange-500 */
+  --color-secondary: #fb923c; /* orange-400 */
+  --color-bg-primary: #ffffff;
+  --color-text-base: #1f2937; /* gray-800 */
+}
+.theme-black {
+  --color-primary: #fb923c; /* orange-400 */
+  --color-secondary: #f97316; /* orange-500 */
+  --color-bg-primary: #1f2937; /* gray-800 */
+  --color-text-base: #f9fafb; /* gray-50 */
 }
 
 .theme-orange {
