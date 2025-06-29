@@ -1,3 +1,4 @@
+import ROUTES_URL from "@constants/ROUTES_URL";
 import { useThemeStore } from "@store/useThemeStore";
 import { Link } from "react-router-dom";
 
@@ -9,8 +10,9 @@ const Navbar = () => {
       <div className="flex">
         <h1 className="pr-6 text-xl font-bold text-primary">Clean UI</h1>
         <div className="flex gap-4 px-4 py-1 text-tBase">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to={ROUTES_URL.HOME}>Home</Link>
+          <Link to={ROUTES_URL.ABOUT}>About</Link>
+          <Link to={ROUTES_URL.USERS}>Users</Link>
         </div>
       </div>
 
