@@ -7,7 +7,9 @@ const Users = () => {
   if (isLoading)
     return (
       <div className="flex flex-col items-center content-center justify-center overflow-x-auto text-tBase">
-        <h1 className="mb-2 text-4xl font-bold text-primary">Users Page</h1>
+        <h1 className="mb-2 text-4xl font-semibold text-primary">
+          Loading users...
+        </h1>
         <div className="flex justify-center text-tBase">
           <div className="overflow-x-auto text-tBase">
             <table className="min-w-[1000px] border border-gray-300 rounded-xl shadow-sm table-auto">
@@ -39,11 +41,18 @@ const Users = () => {
         </div>
       </div>
     );
-  if (error) return <p className="text-red-500">Error fetching users.</p>;
+  if (error)
+    return (
+      <div className="flex flex-col items-center justify-center overflow-x-auto text-tBase">
+        <h1 className="mb-2 text-4xl font-semibold text-primary">
+          Error fetching users.
+        </h1>
+      </div>
+    );
 
   return (
     <div className="flex flex-col items-center justify-center overflow-x-auto text-tBase">
-      <h1 className="mb-2 text-4xl font-bold text-primary">Users Page</h1>
+      <h1 className="mb-2 text-4xl font-semibold text-primary">Users Page</h1>
 
       <div className="max-w-[1000px] w-full rounded-lg shadow border border-gray-100 overflow-hidden">
         <table className="w-full table-auto">
