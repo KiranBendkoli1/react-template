@@ -4,17 +4,20 @@ import About from "@pages/About";
 import { ROUTES_URL } from "@constants/index";
 import PrivateRoute from "./PrivateRoute";
 import Layout from "./Layout";
+import { ErrorBoundary } from "@components/ErrorBoundary";
 
 const AppRouter = () => {
   return (
-    <Routes>
-      <Route element={<PrivateRoute />}>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path={ROUTES_URL.ABOUT} element={<About />} />
+    <ErrorBoundary>
+      <Routes>
+        <Route element={<PrivateRoute />}>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path={ROUTES_URL.ABOUT} element={<About />} />
+          </Route>
         </Route>
-      </Route>
-    </Routes>
+      </Routes>
+    </ErrorBoundary>
   );
 };
 
