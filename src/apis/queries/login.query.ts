@@ -1,12 +1,5 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { fetchUsers, login } from "../services/login.service";
-
-export const useLogin = () =>
-  useMutation({
-    mutationFn: () => {
-      return login();
-    },
-  });
+import { useQuery } from "@tanstack/react-query";
+import { fetchUsers } from "../services/login.service";
 
 export const useFetchUsers = () =>
   useQuery({
