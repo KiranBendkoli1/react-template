@@ -1,5 +1,6 @@
 import { Bounce, ToastContainer } from "react-toastify";
 import AppRouter from "./routes";
+import { BrowserRouter as Router } from "react-router-dom";
 import { useThemeStore } from "@store/useThemeStore";
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           theme="dark"
           transition={Bounce}
         />
-        <AppRouter />
+        <Router>
+          <AppRouter />
+        </Router>
       </div>
     </>
   );
