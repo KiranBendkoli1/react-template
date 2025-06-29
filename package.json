@@ -14,7 +14,9 @@
     "prepare": "husky install",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "type:check": "type-coverage --project tsconfig.app.json",
+    "type:debug":"type-coverage --project tsconfig.app.json --debug"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
@@ -55,6 +57,7 @@
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "prettier": "^3.4.2",
+    "type-coverage": "^2.29.7",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.17.0",
     "vite": "^6.0.1",
