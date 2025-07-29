@@ -1,28 +1,23 @@
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --color-primary: #f97316; /* orange-500 */
-    --color-secondary: #fb923c; /* orange-400 */
-    --color-bg-primary: #ffffff;
-    --color-text-base: #1f2937; /* gray-800 */
-  }
+@theme {
+  --color-primary: #f97316; /* orange-500 */
+  --color-secondary: #fb923c; /* orange-400 */
+  --color-bgPrimary: #ffffff;
+  --color-tBase: #1f2937; /* gray-800 */
 }
 
 .theme-white {
   --color-primary: #f97316; /* orange-500 */
   --color-secondary: #fb923c; /* orange-400 */
-  --color-bg-primary: #ffffff;
-  --color-text-base: #1f2937; /* gray-800 */
+  --color-bgPrimary: #ffffff;
+  --color-tBase: #1f2937; /* gray-800 */
 }
 .theme-black {
   --color-primary: #fb923c; /* orange-400 */
   --color-secondary: #f97316; /* orange-500 */
-  --color-bg-primary: #1f2937; /* gray-800 */
-  --color-text-base: #f9fafb; /* gray-50 */
+  --color-bgPrimary: #1f2937; /* gray-800 */
+  --color-tBase: #f9fafb; /* gray-50 */
 }
 
 .theme-orange {

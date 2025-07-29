@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently  \"npm run css:build\" \"vite\" ",
+    "start": "vite",
     "build": "tsc -b && vite build",
-    "css:build": "npx tailwindcss -i ./src/index.css -o ./src/styles/tailwind.css --watch",
     "commit": "cz",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "preview": "vite preview",
@@ -16,11 +15,12 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "type:check": "type-coverage --project tsconfig.app.json",
-    "type:debug":"type-coverage --project tsconfig.app.json --debug"
+    "type:debug": "type-coverage --project tsconfig.app.json --debug"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-query": "^5.81.5",
     "axios": "^1.7.9",
     "commitlint": "^19.6.0",
@@ -29,6 +29,7 @@
     "react-router-dom": "^7.0.2",
     "react-toastify": "^11.0.5",
     "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
     "zustand": "^5.0.2"
   },
   "devDependencies": {
